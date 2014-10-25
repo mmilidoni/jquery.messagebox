@@ -3,6 +3,9 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
@@ -10,6 +13,8 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+		<script src="js/jquery.messagebox.js"></script>
+		<link rel="stylesheet" href="css/jquery.messagebox.css" />
     <title>Jquery.messagebox by mmilidoni</title>
   </head>
 
@@ -33,7 +38,15 @@
         <section id="main_content">
           <h1>
 <a name="jquerymessagebox" class="anchor" href="#jquerymessagebox"><span class="octicon octicon-link"></span></a>jQuery.messagebox</h1>
+		<p>jQuery.messagebox is a jQuery UI plugin that shows simple and customizable modal dialogs.</p>
 
+<h2>Demo</h2>
+<button onclick='javascript:$.infoMessage("This is an information message");'>INFO</button>
+<button onclick='javascript:$.warningMessage("This is a warning message");'>WARNING</button>
+<button onclick='javascript:$.errorMessage("This is an error message");'>ERROR</button>
+<button onclick='javascript:$.confirmMessage("This is a confirm message", function(){alert("ok pressed")}, function(){alert("cancel pressed")});'>CONFIRM</button>
+<br/>
+<br/>
 <h2>
 <a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
 
@@ -62,10 +75,6 @@
 
 <pre><code>    $.infoMessage("This is an information message");
 </code></pre>
-
-<h3>
-<a name="information-message-with-success-callback" class="anchor" href="#information-message-with-success-callback"><span class="octicon octicon-link"></span></a>Information message with success callback</h3>
-
 <pre><code>    $.infoMessage("This is an information message with success callback", 
             function() {
                     alert("success")
@@ -73,43 +82,27 @@
     );
 </code></pre>
 
-<h2>
-<a name="warning-message" class="anchor" href="#warning-message"><span class="octicon octicon-link"></span></a>Warning message</h2>
-
-<h3>
-<a name="simple-warning-message" class="anchor" href="#simple-warning-message"><span class="octicon octicon-link"></span></a>Simple warning message</h3>
-
-<pre><code>    $.warningMessage("This is a warning message");
+You can show warning, error and confirm messages with:
+<pre><code>    
+	$.warningMessage(...); 
+	$.errorMessage(...); 
+	$.confirmMessage(...); 
 </code></pre>
 
-<h3>
-<a name="warning-message-with-success-callback" class="anchor" href="#warning-message-with-success-callback"><span class="octicon octicon-link"></span></a>Warning message with success callback</h3>
+<h2>Customizing colors</h2>
+You can customize colors by editing jquery.messagebox.css<br/>
 
-<pre><code>    $.warningMessage("This is a warning message with success callback", 
-            function() {
-                    alert("success")
-            }
-    );
+<pre><code>
+/* ERROR DIALOG */
+.messagebox-error { 
+    border: 1px solid #CD0A0A; /* BORDER COLOR */
+    background: #FEF1EC; /* BACKGROUND COLOR */
+    color: #CD0A0A; /* TEXT COLOR */
+}
 </code></pre>
 
-<h2>
-<a name="error-message" class="anchor" href="#error-message"><span class="octicon octicon-link"></span></a>Error message</h2>
 
-<h3>
-<a name="simple-error-message" class="anchor" href="#simple-error-message"><span class="octicon octicon-link"></span></a>Simple error message</h3>
 
-<pre><code>    $.errorMessage("This is an error message");
-</code></pre>
-
-<h3>
-<a name="error-message-with-success-callback" class="anchor" href="#error-message-with-success-callback"><span class="octicon octicon-link"></span></a>Error message with success callback</h3>
-
-<pre><code>    $.errorMessage("This is an error message with success callback", 
-            function() {
-                    alert("success");
-            }
-    );
-</code></pre>
         </section>
 
         <footer>

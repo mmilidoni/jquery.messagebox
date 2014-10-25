@@ -1,0 +1,38 @@
+/**************************************************************************************
+ * jquery.messagebox 0.1
+ * by Michele Milidoni
+ * https://github.com/mmilidoni/jquery.messagebox
+ * This project licensed under a Apache 2.0 License.
+ **************************************************************************************/
+
+.ui-dialog .ui-dialog-buttonpane {
+    background: inherit;
+}
+
+.ui-button-text {
+    background: white;
+}
+
+.messagebox-error {
+    border: 1px solid #CD0A0A;
+    background: #FEF1EC;
+    color: #CD0A0A;
+}
+
+.messagebox-warning {
+    border: 1px solid #CDB60A;
+    background: #FFF6B0;
+    color: #CDB60A;
+}
+
+.messagebox-info {
+    border: 1px solid #0E5583;
+    background: #AFCADC;
+    color: #0E5583;
+}
+
+.messagebox-confirm {
+    border: 1px solid #828282;
+    background: #EEEEEE;
+    color: #515151;
+}
